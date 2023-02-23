@@ -8,13 +8,20 @@
     "npm": "8.5.0"
   },
   "scripts": {
-    "start": "node webserver",
-    "client:dev": "webpack-dev-server --open --mode development",
-    "client:build": "webpack --mode production",
-    "kmz:server:dev": "nodemon watch server-kml/index.js",
-    "kmz:server:prod": "node server-kml/index.js",
-    "lint:fix": "eslint --fix client server-kml webserver webpack.config.js",
-    "lint": "eslint client server-kml webserver webpack.config.js"
+    "start": "npm run client:build && cd webserver && npm start",
+    "install": "npm install --prefix ./client && npm install --prefix ./webserver && npm install --prefix ./webserver-kmz",
+    "lint:all": "npm run lint --prefix ./client && npm run lint --prefix ./webserver && npm run lint --prefix ./webserver-kmz",
+    "lint:fix:all": "npm run lint:fix --prefix ./client && npm run lint:fix --prefix ./webserver && npm run lint:fix --prefix ./webserver-kmz",
+    "client:dev": "cd client && npm run dev",
+    "client:build": "cd client && npm run build",
+    "client:lint": "cd client && npm run lint",
+    "client:lint:fix": "cd client && npm run lint:fix",
+    "kmz:server:dev": "cd webserver-kmz && npm run dev",
+    "kmz:server:prod": "cd webserver-kmz && npm start",
+    "kmz:server:lint": "cd webserver-kmz && npm run lint",
+    "kmz:server:lint:fix": "cd webserver-kmz && npm run lint:fix",
+    "webserver:lint": "cd webserver && npm run lint",
+    "webserver:lint:fix": "cd webserver && npm run lint:fix"
   },
   "repository": {
     "type": "git",
@@ -25,25 +32,5 @@
   "bugs": {
     "url": "https://github.com/ciatph/webmap-kmz/issues"
   },
-  "homepage": "https://github.com/ciatph/webmap-kmz#readme",
-  "devDependencies": {
-    "copy-webpack-plugin": "^11.0.0",
-    "css-loader": "^6.7.3",
-    "eslint": "^8.34.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "html-webpack-plugin": "^5.5.0",
-    "nodemon": "^2.0.20",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
-  },
-  "dependencies": {
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "leaflet": "^1.9.3",
-    "leaflet-kmz": "^1.0.9"
-  }
+  "homepage": "https://github.com/ciatph/webmap-kmz#readme"
 }

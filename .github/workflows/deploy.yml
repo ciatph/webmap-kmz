@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 16.14.2
       - name: Install Dependencies and lint
-        run: npm install
+        run: npm install --prefix ./client
       - name: Export static files
         run: |
           npm run client:build

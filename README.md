@@ -15,20 +15,15 @@ The following dependecies are used for this project. Feel free to experiment usi
 3. NodeJS 16.14.2 installed using nvm
    - node v16.14.2
    - npm v8.5.0
-4. NodeJS modules (installed via npm)
-   - webpack 5.75.0
-   - webpack-dev-server 4.11.1
-   - webpack-cli 5.0.1
-   - css-loader 6.7.3
-   - style-loader 3.3.1
-   - html-webpack-plugin 5.5.0
+4. NodeJS modules (installed via npm) are available for each app directory.<br>
+   - client, webserver and webserver-kmz
 
 ## Installation
 
 1. Clone this repository.<br>
 `git clone https://github.com/ciatph/webmap-kmz.git`
 
-2. Install dependencies.<br>
+2. Install dependencies on all app directories.<br>
 `npm install`
 
 1. Run the localhost static website:<br>

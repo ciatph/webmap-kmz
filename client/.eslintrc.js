@@ -17,11 +17,11 @@ module.exports = {
     ecmaVersion: 2020
   },
   rules: {
-    'indent': ['error', 2],
+    indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
-    'quotes': ['error', 'single'],
-    'semi': ['error', 'never'],
-    'no-console': ['error', { 'allow': ['error'] }],
+    quotes: ['error', 'single'],
+    semi: ['error', 'never'],
+    'no-console': ['error', { allow: ['error'] }],
     'no-unused-vars': 'off',
     'no-undef': 'off'
   }
