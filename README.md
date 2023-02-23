@@ -58,5 +58,13 @@ Run the KMZ express server in development load with live reload using nodemon.
 
 Run the KMZ express server for production mode.
 
+### `npm run lint`
+
+Lint the client, server-kml and webserver directories.
+
+### `npm run lint:fix`
+
+Fix lint errors in the client, server-kml and webserver directories.
+
 @ciatph<br>
 20230224

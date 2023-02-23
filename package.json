@@ -2,7 +2,11 @@
   "name": "test-kmz",
   "version": "1.0.0",
   "description": "Testing loading KMZ files on a LeafletJS web map.",
-  "main": "index.js",
+  "main": "",
+  "engines": {
+    "node": "16.14.2",
+    "npm": "8.5.0"
+  },
   "scripts": {
     "start": "node webserver",
     "client:dev": "webpack-dev-server --open --mode development",
@@ -14,17 +18,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "D:/LAB/Web/_weaponsforge/test-kmz.git"
+    "url": "git+https://github.com/ciatph/webmap-kmz.git"
   },
-  "author": "",
+  "author": "ciatph",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ciatph/webmap-kmz/issues"
+  },
+  "homepage": "https://github.com/ciatph/webmap-kmz#readme",
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
     "eslint": "^8.34.0",
     "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
     "html-webpack-plugin": "^5.5.0",
     "nodemon": "^2.0.20",
