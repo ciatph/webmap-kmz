@@ -11,12 +11,12 @@ function loadMap () {
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map)
+  }).addTo(map)
 
   // KMZ Layer (async)
   const kmz = L.kmzLayer().addTo(map)
 
-  kmz.on('load', function(e) {
+  kmz.on('load', function (e) {
     control.addOverlay(e.layer, e.name)
   })
 

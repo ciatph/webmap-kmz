@@ -11,11 +11,11 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.resolve(__dirname, 'public')))
 
-
 app.get('*', (req, res) => {
   return res.status(200).send('Welcome to the KMZ server')
 })
 
 app.listen(PORT, () => {
+  /* eslint-disable no-console */
   console.log(`KMZ server\nlistening on http://localhost:${PORT}`)
 })
