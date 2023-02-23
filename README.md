@@ -23,15 +23,16 @@ The following dependecies are used for this project. Feel free to experiment usi
 
 ## Installation
 
-1. Clone this repository.
+1. Clone this repository.<br>
+`git clone https://github.com/ciatph/webmap-kmz.git`
 
 2. Install dependencies.<br>
 `npm install`
 
-3. Run the localhost static website:<br>
+1. Run the localhost static website:<br>
 `npm run client:dev`
 
-4. View available NPM scripts in the [Available Scripts](#available-scripts) section for more information.
+1. View available NPM scripts in the [Available Scripts](#available-scripts) section for more information.
 
 ## Available Scripts
 

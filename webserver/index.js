@@ -10,7 +10,7 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
-app.use(express.static(path.resolve(__dirname, '..', 'dist', 'public')))
+app.use(express.static(path.resolve(__dirname, '..', 'dist')))
 
 app.get('*', (req, res) => {
   return res.status(200).send('Welcome to the Web Map server')
