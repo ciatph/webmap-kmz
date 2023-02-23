@@ -17,5 +17,6 @@ app.get('*', (req, res) => {
 })
 
 app.listen(PORT, () => {
+  /* eslint-disable no-console */
   console.log(`Web server\nlistening on http://localhost:${PORT}`)
 })
