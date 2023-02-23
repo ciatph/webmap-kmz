@@ -9,17 +9,14 @@ jobs:
   lint-app:
     name: Lint Client
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: 16.14.2
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
 
-      - name: Use NodeJS ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - name: Use NodeJS v16.14.2
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 16.14.2
 
       - name: Cache dependencies
         uses: actions/cache@v2
