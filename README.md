@@ -29,7 +29,10 @@ The following dependecies are used for this project. Feel free to experiment usi
 3. Run the localhost static website:<br>
 `npm run client:dev`
 
-4. View available NPM scripts in the [Available Scripts](#available-scripts) section for more information.
+4. Edit the contents of the localhost web map on<br>
+`/client/app/main.js`
+
+5. View available NPM scripts in the [Available Scripts](#available-scripts) section for more information.
 
 ## Available Scripts
 
@@ -39,8 +42,8 @@ Installs nodejs dependencies on the **/client**, **/webserver** and **/webserver
 
 ### `npm start`
 
-Build the client app and run it on the production web server.<br>
-This requires the **/dist** directory output from the `npm run client:build` script.
+Builds the client app to the **/dist** directory and runs it on the production web server.<br>
+This script automatically runs the `npm run client:build` script.
 
 ### `npm run client:dev`
 
