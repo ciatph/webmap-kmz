@@ -4,6 +4,8 @@ Testing loading KMZ files on a LeafletJS web map.
 
 KMZ file source: [[link]](https://www.datapages.com/gis-map-publishing-program/gis-open-files/global-framework/global-heat-flow-database/kmz-files-list)
 
+Preview: https://ciatph.github.io/webmap-kmz
+
 ### Dependencies
 
 The following dependecies are used for this project. Feel free to experiment using other dependencies and versions.
