@@ -4,11 +4,11 @@ const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   // Files to watch for
-  entry: './client/index.js',
+  entry: './app/index.js',
 
   // Bundle/build output directory
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '..', 'dist'),
     filename: 'bundle.js'
   },
 
@@ -17,12 +17,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       title: 'KMZ on Leaflet',
-      template: './client/index.html'
+      template: './app/index.html'
     }),
     new CopyPlugin({
       patterns: [
         {
-          from: 'client/philippines.kmz',
+          from: 'app/philippines.kmz',
           to: ''
         }
       ]
@@ -49,7 +49,7 @@ module.exports = {
     hot: false, // disable hot reload for plain HTML/CSS/JS development
     compress: true,
     static: {
-      directory: path.join(__dirname, 'client'),
+      directory: path.join(__dirname, 'app'),
       publicPath: '/'
     }
   }

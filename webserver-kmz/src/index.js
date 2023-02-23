@@ -1,22 +1,21 @@
 const path = require('path')
 const express = require('express')
+const cors = require('cors')
 const cookieParser = require('cookie-parser')
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3002
 const app = express()
 
-// This webserver requires the "dist" directory
-// npm run client:build
-
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
-app.use(express.static(path.resolve(__dirname, '..', 'dist')))
+app.use(express.static('public'))
 
 app.get('*', (req, res) => {
-  return res.status(200).send('Welcome to the Web Map server')
+  return res.status(200).send('Welcome to the KMZ server')
 })
 
 app.listen(PORT, () => {
   /* eslint-disable no-console */
-  console.log(`Web server\nlistening on http://localhost:${PORT}`)
+  console.log(`KMZ server\nlistening on http://localhost:${PORT}`)
 })

@@ -18,14 +18,7 @@ jobs:
         with:
           node-version: 16.14.2
 
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: npm-${{ hashFiles('package-lock.json') }}
-          restore-keys: npm-
-
-      - name: Install Dependencies and lint
+      - name: Install Dependencies and Lint
         run: |
           npm install
-          npm run lint
+          npm run lint:all

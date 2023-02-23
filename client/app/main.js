@@ -21,7 +21,7 @@ function loadMap () {
   })
 
   // Load KMZ file from a cors-enabled web server
-  // kmz.load('http://localhost:3001/philippines.kmz')
+  // kmz.load('http://localhost:3002/philippines.kmz')
 
   // Load KMZ file relative to this script's location
   kmz.load('philippines.kmz')
