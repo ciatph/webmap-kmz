@@ -11,19 +11,24 @@ jobs:
     name: Export client
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
       - name: Use NodeJS v16.14.2
         uses: actions/setup-node@v3
         with:
           node-version: 16.14.2
+
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
       - name: Install Client dependencies
         run: npm install --prefix ./client
+
       - name: Export static files
         run: |
           npm run client:build
+
       - name: Disable Jekyll
         run: touch dist/.nojekyll
+
       - name: Archive Development Artifact
         uses: actions/upload-artifact@v3
         with:
@@ -40,8 +45,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: main-dist
+
       - name: List files for publish
         run: ls -l -a
+
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
