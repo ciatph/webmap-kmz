@@ -44,7 +44,7 @@ This requires the **/dist** directory output from the `npm run client:build` scr
 
 ### `npm run client:dev`
 
-Run the simple localhost static website development environment with live reload using webpack.
+Run the simple localhost static website on development mode with live reload using webpack.
 
 ### `npm run client:build`
 
