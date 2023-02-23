@@ -26,16 +26,20 @@ The following dependecies are used for this project. Feel free to experiment usi
 2. Install dependencies on all app directories.<br>
 `npm install`
 
-1. Run the localhost static website:<br>
+3. Run the localhost static website:<br>
 `npm run client:dev`
 
-1. View available NPM scripts in the [Available Scripts](#available-scripts) section for more information.
+4. View available NPM scripts in the [Available Scripts](#available-scripts) section for more information.
 
 ## Available Scripts
 
+### `npm install`
+
+Installs nodejs dependencies on the **/client**, **/webserver** and **/webserver-kmz** directories.
+
 ### `npm start`
 
-Run the production web server.<br>
+Build the client app and run it on the production web server.<br>
 This requires the **/dist** directory output from the `npm run client:build` script.
 
 ### `npm run client:dev`
@@ -47,6 +51,14 @@ Run the simple localhost static website development environment with live reload
 Build the simple localhost static website for production mode using webpack.<br>
 Built files are placed in the `/dist` directory.
 
+### `npm run client:lint`
+
+Check lint errors on the **/client** directory.
+
+### `npm run client:lint:fix`
+
+Fix lint errors on the **/client** directory.
+
 ### `npm run kmz:server:dev`
 
 Run the KMZ express server in development load with live reload using nodemon.
@@ -55,13 +67,29 @@ Run the KMZ express server in development load with live reload using nodemon.
 
 Run the KMZ express server for production mode.
 
-### `npm run lint`
+### `npm run kmz:server:lint`
 
-Lint the client, server-kml and webserver directories.
+Check lint errors on the **/webserver-kmz** directory.
 
-### `npm run lint:fix`
+### `npm run kmz:server:lint:fix`
 
-Fix lint errors in the client, server-kml and webserver directories.
+Fix lint errors on the **/webserver-kmz** directory.
+
+### `npm run webserver:lint`
+
+Check lint errors on the **/webserver** directory.
+
+### `npm run webserver:lint:fix`
+
+Fix lint errors on the **/webserver** directory.
+
+### `npm run lint:all`
+
+Check lint errors on the **client**, **webserver** and **webserver-kmz** directories.
+
+### `npm run lint:fix:all`
+
+Fix lint errors on the **client**, **webserver** and **webserver-kmz** directories.
 
 @ciatph<br>
 20230224
