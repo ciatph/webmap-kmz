@@ -4,6 +4,8 @@ Testing loading KMZ files on a LeafletJS web map.
 
 KMZ file source: [[link]](https://www.datapages.com/gis-map-publishing-program/gis-open-files/global-framework/global-heat-flow-database/kmz-files-list)
 
+Preview: https://ciatph.github.io/webmap-kmz
+
 ### Dependencies
 
 The following dependecies are used for this project. Feel free to experiment using other dependencies and versions.
@@ -57,6 +59,14 @@ Run the KMZ express server in development load with live reload using nodemon.
 ### `npm run kmz:server:prod`
 
 Run the KMZ express server for production mode.
+
+### `npm run lint`
+
+Lint the client, server-kml and webserver directories.
+
+### `npm run lint:fix`
+
+Fix lint errors in the client, server-kml and webserver directories.
 
 @ciatph<br>
 20230224

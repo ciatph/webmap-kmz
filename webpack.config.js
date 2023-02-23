@@ -9,15 +9,15 @@ module.exports = {
   // Bundle/build output directory
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
 
   // Plugins
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
-      title : 'KMZ on Leaflet',
-      template : './client/index.html'
+      title: 'KMZ on Leaflet',
+      template: './client/index.html'
     }),
     new CopyPlugin({
       patterns: [
@@ -39,7 +39,7 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif|kmz)$/i,
         type: 'asset'
-     }
+      }
     ]
   },
 
