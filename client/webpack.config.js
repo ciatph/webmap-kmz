@@ -48,9 +48,12 @@ module.exports = {
     open: true,
     hot: false, // disable hot reload for plain HTML/CSS/JS development
     compress: true,
+    port: 3000,
     static: {
       directory: path.join(__dirname, 'app'),
       publicPath: '/'
     }
-  }
+  },
+
+  watch: (process.env.NODE_ENV === 'development')
 }

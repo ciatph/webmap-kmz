@@ -11,10 +11,10 @@ jobs:
     name: Export client
     runs-on: ubuntu-latest
     steps:
-      - name: Use NodeJS v16.14.2
+      - name: Use NodeJS v16.19.1
         uses: actions/setup-node@v3
         with:
-          node-version: 16.14.2
+          node-version: 16.19.1
 
       - name: Checkout the repository
         uses: actions/checkout@v3

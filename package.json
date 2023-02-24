@@ -1,17 +1,17 @@
 {
-  "name": "test-kmz",
+  "name": "webmap-kmz",
   "version": "1.0.0",
   "description": "Testing loading KMZ files on a LeafletJS web map.",
   "main": "",
   "engines": {
-    "node": "16.14.2",
-    "npm": "8.5.0"
+    "node": "16.19.1",
+    "npm": "8.19.3"
   },
   "scripts": {
     "start": "npm run client:build && cd webserver && npm start",
-    "install": "npm install --prefix ./client && npm install --prefix ./webserver && npm install --prefix ./webserver-kmz",
-    "lint:all": "npm run lint --prefix ./client && npm run lint --prefix ./webserver && npm run lint --prefix ./webserver-kmz",
-    "lint:fix:all": "npm run lint:fix --prefix ./client && npm run lint:fix --prefix ./webserver && npm run lint:fix --prefix ./webserver-kmz",
+    "install": "npm run install:client && npm run install:server && npm run install:kmz:server",
+    "lint:all": "npm run lint:fix --prefix ./client && npm run kmz:server:lint && npm run webserver:lint",
+    "lint:fix:all": "npm run lint:fix --prefix ./client && npm run kmz:server:lint:fix && npm run webserver:lint:fix",
     "client:dev": "cd client && npm run dev",
     "client:build": "cd client && npm run build",
     "client:lint": "cd client && npm run lint",
@@ -21,7 +21,10 @@
     "kmz:server:lint": "cd webserver-kmz && npm run lint",
     "kmz:server:lint:fix": "cd webserver-kmz && npm run lint:fix",
     "webserver:lint": "cd webserver && npm run lint",
-    "webserver:lint:fix": "cd webserver && npm run lint:fix"
+    "webserver:lint:fix": "cd webserver && npm run lint:fix",
+    "install:client": "cd client && npm install",
+    "install:server": "cd webserver && npm install",
+    "install:kmz:server": "cd webserver-kmz && npm install"
   },
   "repository": {
     "type": "git",
