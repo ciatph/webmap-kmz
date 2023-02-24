@@ -1,0 +1,37 @@
+# Builds (2) separate services for the client and server
+
+version: "3"
+services:
+  # Basic webpack 5 built app running on an nginx webserver
+  client-prod:
+    container_name: client-prod
+    image: ciatphdev/webmap-kmz-client:latest
+    restart: always
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      target: production
+    networks:
+      - webmap-kmz-prod
+    ports:
+      - "3000:3000"
+
+  # Production express server for hosting KMZ files
+  webserver-kmz-prod:
+    container_name: webserver-kmz-prod
+    image: ciatphdev/webmap-kmz-server:latest
+    build:
+      context: ./webserver-kmz
+      dockerfile: ./Dockerfile
+      target: production
+    networks:
+      - webmap-kmz-prod
+    volumes:
+      - ./webserver-kmz/src:/opt/webserver-kmz/src
+    ports:
+      - "3002:3002"
+
+networks:
+  webmap-kmz-prod:
+    name: webmap-kmz-prod
+    external: false
