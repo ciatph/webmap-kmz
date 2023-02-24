@@ -8,9 +8,9 @@ The following dependecies are used for this project. Feel free to experiment usi
 
 1. Windows 64-bit OS
 2. nvm version 1.1.9 (for Windows)
-3. NodeJS 16.14.2 installed using nvm
-   - node v16.14.2
-   - npm v8.5.0
+3. NodeJS 16.19.1 installed using nvm
+   - node v16.19.1
+   - npm v8.19.3
 4. NodeJS modules (installed via npm)
    - webpack 5.75.0
    - webpack-dev-server 4.11.1
