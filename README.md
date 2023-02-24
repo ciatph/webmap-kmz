@@ -52,7 +52,7 @@ Edit any of the files under `/client/app` or `/webserver/src` after running step
 
 ```
 # 1. Build the client and webserver-kmz containers for localhost development.
-docker compose -f docker-compose.dev.yml buil
+docker compose -f docker-compose.dev.yml build
 
 # 2. Create and start the development client and webserver-kmz containers
 docker compose -f docker-compose.dev.yml up
@@ -68,7 +68,7 @@ The following docker-compose commands build small `client` and `webserver-kmz` i
 
 ```
 # 1. Build the client and webserver-kmz containers for production deployment.
-docker compose -f docker-compose.prod.yml buil
+docker compose -f docker-compose.prod.yml build
 
 # 2. Create and start the production client and webserver-kmz containers.
 docker compose -f docker-compose.prod.yml up
