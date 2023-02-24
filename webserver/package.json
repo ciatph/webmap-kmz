@@ -1,12 +1,8 @@
 {
   "name": "webserver",
   "version": "1.0.0",
-  "description": "Production web server",
+  "description": "Express web server for hosting the webpack-built website from the client directory.",
   "main": "src/index.js",
-  "engines": {
-    "node": "16.14.2",
-    "npm": "8.5.0"
-  },
   "scripts": {
     "start": "node src/index.js",
     "lint:fix": "eslint --fix src .eslintrc.js",
@@ -22,7 +18,6 @@
   "dependencies": {
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "test-kmz": "file:.."
+    "express": "^4.18.2"
   }
 }

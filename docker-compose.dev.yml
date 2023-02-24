@@ -1,0 +1,36 @@
+version: "3"
+services:
+  # Simple webpack 5 app for development mode
+  client-dev:
+    container_name: client-dev
+    image: ciatphdev/webmap-kmz-client:dev
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      target: development
+    networks:
+      - webmap-kmz-dev
+    volumes:
+      - ./client/app:/opt/client/app
+    ports:
+      - "3000:3000"
+
+  # Express server for hosting KMZ files running in development mode
+  webserver-kmz:
+    container_name: webserver-kmz
+    image: ciatphdev/webmap-kmz-server:dev
+    build:
+      context: ./webserver-kmz
+      dockerfile: ./Dockerfile
+      target: development
+    networks:
+      - webmap-kmz-dev
+    volumes:
+      - ./webserver-kmz/src:/opt/webserver-kmz/src
+    ports:
+      - "3002:3002"
+
+networks:
+  webmap-kmz-dev:
+    name: webmap-kmz-dev
+    external: false
