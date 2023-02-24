@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "npm run client:build && cd webserver && npm start",
-    "install": "(cd client && npm install) && (cd .. && cd webserver && npm install) && (cd .. && cd webserver-kmz && npm install)",
+    "install": "npm run install:client && npm run install:server && npm run install:kmz:server",
     "lint:all": "npm run lint:fix --prefix ./client && npm run kmz:server:lint && npm run webserver:lint",
     "lint:fix:all": "npm run lint:fix --prefix ./client && npm run kmz:server:lint:fix && npm run webserver:lint:fix",
     "client:dev": "cd client && npm run dev",
@@ -21,7 +21,10 @@
     "kmz:server:lint": "cd webserver-kmz && npm run lint",
     "kmz:server:lint:fix": "cd webserver-kmz && npm run lint:fix",
     "webserver:lint": "cd webserver && npm run lint",
-    "webserver:lint:fix": "cd webserver && npm run lint:fix"
+    "webserver:lint:fix": "cd webserver && npm run lint:fix",
+    "install:client": "cd client && npm install",
+    "install:server": "cd webserver && npm install",
+    "install:kmz:server": "cd webserver-kmz && npm install"
   },
   "repository": {
     "type": "git",
